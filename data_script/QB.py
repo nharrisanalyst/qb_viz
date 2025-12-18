@@ -3,6 +3,7 @@ from dataclasses import dataclass
 @dataclass
 class QB:
     name:str
+    id:int
     team:str
     result:str
     comp:int

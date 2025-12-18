@@ -1,10 +1,11 @@
 
 class ParseData:
-    def __init__(self, soup, QB):
+    def __init__(self, soup, QB, parsedIDs):
         self.soup = soup
         self.QB=QB
         self.data_list=[]
         self.week = self._get_week()
+        self.parsedIDs = parsedIDs
     
     def _getDataRows(self):
         tables  = self.soup.find_all('table')
@@ -17,12 +18,22 @@ class ParseData:
     
     def _get_week(self):
         header = self.soup.find('h1')
-        return int(header.text[-1:])
+        header_split = header.text.split()
+        return int(header_split[-1])
+    
+    def _get_id(self,data):
+        a = data[1].find('a')
+        href = a["href"]
+        id = href.split('/')[-2]
+        return int(id)
     
     def _makeDataList(self):
         for row in self.rows:
             data = row.find_all('td')
-            qb = self.QB(name=self._format_name(data[1].text),
+            id = self._get_id(data)
+            qb = self.QB(
+                    name=self._format_name(data[1].text),
+                    id =id,
                     team=data[2].text,
                     result=data[3].text,
                     comp=data[4].text,
@@ -34,8 +45,10 @@ class ParseData:
                     fum=data[10].text,
                     rat=data[11].text, 
                     week = self.week
-                )
-            self.data_list.append(qb)
+            )
+            if id not in self.parsedIDs:
+                self.data_list.append(qb)
+                self.parsedIDs[id] = True
     
     def returnData(self):
         self._getDataRows()
