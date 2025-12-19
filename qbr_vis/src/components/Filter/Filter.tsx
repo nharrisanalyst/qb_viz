@@ -1,3 +1,5 @@
+import { ChangeEvent } from 'react'
+
 export type optionType ={
     text:string;
     id:number;
@@ -10,22 +12,25 @@ interface FilterProps {
 }
 
 const Filter = ({options, firstID, optionChange}:FilterProps)=>{
-   const  handleOnChange=(e)=>{
-        e.prevenDefault();
+   const  handleOnChange=(e:ChangeEvent<HTMLSelectElement> )=>{
+        e.preventDefault();
+
+        const value = Number(e.target.value);
+        optionChange(value);
         
     }
     
     return(
-        <>
-        <label>Choose a Quarter Back</label>
-        <select>
-            {
-                options.map(o=>(
-                    <option value={o.id}>{o.text}</option>
-                ))
-            }
-        </select>
-        </>
+        <div>
+         <div><label>Choose a Quarter Back</label></div>
+            <select onChange={handleOnChange}>
+                {
+                    options.map(o=>(
+                        <option value={o.id}>{o.text}</option>
+                    ))
+                }
+            </select>
+        </div>
     )
      
 }

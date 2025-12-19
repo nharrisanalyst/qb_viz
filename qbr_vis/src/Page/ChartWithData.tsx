@@ -2,12 +2,13 @@ import {useMemo, useState} from 'react';
 import {useGetQBData} from '../hooks/useGetQBData'
 import Chart from '../components/Chart/Chart'
 import Filter from '../components/Filter/Filter'
+import QBImage from '../components/QBImage/QBImage';
 import { makeFilterData } from './utilis/makeFilterData'
 
 const ChartWithData =()=>{
     const [selectedQB, setSelectedQB] = useState<number>(3912547);
     const [data,loading,error] = useGetQBData();
-    
+
     const filterData = useMemo(()=>{
         if(!data) return null;
         return makeFilterData(data);
@@ -33,6 +34,7 @@ const ChartWithData =()=>{
         <>
         <Chart data={data} qbID={selectedQB} />
         {!filterData?null:(<Filter options={filterData} optionChange={setSelectedQB} firstID={selectedQB} />)}
+        <QBImage qbID={selectedQB} />
         </>
 
     )
