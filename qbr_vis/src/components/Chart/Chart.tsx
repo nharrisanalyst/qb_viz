@@ -76,7 +76,7 @@ const Chart = ({
         if(!path || lineDataQB === LINE_DATA_ERROR||!xScale || !yScale ) return null;
         return(
             <g>
-        {lineDataQB.map(qb=>(<circle cx={xScale(qb.week)} cy={yScale(qb.rat)} r='4' fill='none' stroke={QB_LINE_STROKE_COLOR} strokeWidth='1'/>))}
+        {lineDataQB.map(qb=>(<circle cx={xScale(qb.week)} cy={yScale(qb.rat)} r='4' fill='none' stroke={QB_LINE_STROKE_COLOR} strokeWidth='2'/>))}
         </g>
         )
     }
@@ -120,9 +120,12 @@ const Chart = ({
         <svg width={width} height={height}>   
             <g ref={gy} className='y-axis' transform={`translate(${marginLeft},0)`}/>
             <g ref={gx} className='x-axis' transform={`translate(0,${height - marginBottom})`}/>
+            <text opacity={0.75} fontSize={12} x={width-marginLeft - marginRight+10} y={height-5} textAnchor={'middle'}>NFL Week</text>
+            <text opacity={0.75} fontSize={12} transform={'translate(20,' + 130 + ')rotate(-90)'} >QB Passing Rating</text>
                 <Circles />
                 <QBCircles />
                 <Line />
+            
 
 
         </svg>

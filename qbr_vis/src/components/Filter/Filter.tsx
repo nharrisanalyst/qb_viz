@@ -23,7 +23,7 @@ const Filter = ({options, firstID, optionChange}:FilterProps)=>{
     return(
         <div>
          <div><label>Choose a Quarter Back</label></div>
-            <select onChange={handleOnChange}>
+            <select value={firstID} onChange={handleOnChange}>
                 {
                     options.map(o=>(
                         <option value={o.id}>{o.text}</option>

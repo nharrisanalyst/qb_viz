@@ -10,5 +10,10 @@ export const makeFilterData=(data:QB[]):optionType[]=>{
         }
      })
 
-     return [...qbMap].map(([id,name])=>({text:name, id:id}))
+     return [...qbMap].map(([id,name])=>({text:name, id:id})).sort((a,b)=>{
+        const aLastName = a.text.split(" ")[1];
+        const bLastName = b.text.split(" ")[1];
+        return aLastName.localeCompare(bLastName);
+    
+    })
 }
