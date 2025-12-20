@@ -39,7 +39,6 @@ const Chart = ({
     
     const xScale = useMemo(()=>{
         const domain = extent(data, d => d.week)
-             console.log('we are here', domain)
         if (!domain[0]|| !domain[1]) return null
         return scaleLinear<number,number>([0,domain[1]], [marginLeft, width - marginRight])
     },[data])
@@ -61,8 +60,7 @@ const Chart = ({
         if(lineDataQB === LINE_DATA_ERROR) return null;
         return lineShape(lineDataQB);
    },[yScale,xScale, lineDataQB])
-    
-    console.log('the path to the line', path)
+   
     const Circles = ()=>{
         if(!xScale || !yScale) return null;
         return(

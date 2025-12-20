@@ -32,11 +32,8 @@ export const useGetQBData =():[QB[] | null,'LOADING'|'DATA_LOADED'| 'LOADING_ERR
         const getQB = async () =>{
             try{
                 const data = await csv<QB>(CSV_FILE_PATH, parseQBData);
-                console.log('thisi is the data', data)
                 setQBData(data);
-
             }catch(error){
-                console.log('this is an error', error)
                 setError(true);
                 setLoading('LOADING_ERROR')
             }finally{
