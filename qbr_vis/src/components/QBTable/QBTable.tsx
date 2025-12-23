@@ -2,10 +2,7 @@
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table'
 import type { ColumnDef } from '@tanstack/react-table';
 
-const data = [{ id: 1, name: 'Ada' }]
-const columns = [{ accessorKey: 'name', header: 'Name' }]
-
-
+import './qbTableStyles.scss';
 
 interface QBTableProps {
     data:object[];
@@ -17,8 +14,8 @@ const QBTable=({data, columns}:QBTableProps)=> {
   const table = useReactTable({ data, columns, getCoreRowModel: getCoreRowModel() })
 
   return (
-    <table>
-      <thead>
+    <table className='main-table'>
+      <thead className='main-t-head'>
         {table.getHeaderGroups().map((hg) => (
           <tr key={hg.id}>
             {hg.headers.map((header) => (
