@@ -68,7 +68,7 @@ const ChartWithData =()=>{
         <>
         <div>
         {!filterData?null:(<Filter options={filterData} optionChange={setSelectedQB} firstID={selectedQB} />)}
-        <QBImage qbID={selectedQB} />
+        {!QBName?null:(<QBImage qbID={selectedQB} name={QBName}/>)}
         </div>
         <Chart data={data} qbID={selectedQB} />
         
