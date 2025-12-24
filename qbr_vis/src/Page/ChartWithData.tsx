@@ -4,7 +4,7 @@ import Chart from '../components/Chart/Chart'
 import Filter from '../components/Filter/Filter'
 import QBImage from '../components/QBImage/QBImage';
 import TableAndTitle from '../components/TableAndTitle/TableAndTitle'
-import QBTable from '../components/QBTable/QBTable';
+import TableTitle from '../components/TableTitle/TableTitle';
 import { getQBName } from './utilis/getQBName';
 import { makeFilterData } from './utilis/makeFilterData';
 import { makeTableData, makeDataTotals, makeAverages } from './utilis/makeTableData';
@@ -72,8 +72,11 @@ const ChartWithData =()=>{
         {!filterData?null:(<Filter options={filterData} optionChange={setSelectedQB} firstID={selectedQB} />)}
         <div className='app-main-stuff'>
             {!QBName?null:(<QBImage qbID={selectedQB} name={QBName}/>)}
+            <div >
+            <TableTitle text='Weekly QB Rating' name={""} />
             <Chart data={data} qbID={selectedQB} />
-            {!tableData || !QBName? null:<TableAndTitle name={QBName} titleText='Stats for ' data={tableData.tableData} columns={tableData.columns}  />}
+            </div>
+            {!tableData || !QBName? null:<TableAndTitle name={""} titleText='Weekly Stats' data={tableData.tableData} columns={tableData.columns}  />}
         </div>
         </>
 

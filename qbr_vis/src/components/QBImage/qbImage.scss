@@ -1,8 +1,11 @@
 .qb-image-cont{
     display: flex;
     margin: 0 auto;
+    width: 1000px;
+    margin-bottom:64px;
     .qb-name-main{
         color:Black;
         font-weight: bold;
+        font-size: 32px;
     }
 }

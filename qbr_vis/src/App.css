@@ -1,9 +1,13 @@
+body{
+  background-color:#F0F0F0;
+}
+
 #root {
   margin: 0 auto;
   text-align: center;
   box-shadow: #00000026 0 4px 15px;
-  max-width: 1532px;
-  /
+  max-width: 1480px;
+  
 }
 
 .main-app-cont{
