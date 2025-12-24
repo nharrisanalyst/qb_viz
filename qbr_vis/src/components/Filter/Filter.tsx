@@ -1,4 +1,5 @@
 import type { ChangeEvent } from 'react'
+import './filter.scss'
 
 export type optionType ={
     text:string;
@@ -21,8 +22,9 @@ const Filter = ({options, firstID, optionChange}:FilterProps)=>{
     }
     
     return(
-        <div>
-         <div><label>Choose a Quarter Back</label></div>
+        <div className='main-filter-cont'>
+        <div className='main-filter'>
+         <div><label className='filter-label'>Choose a Quarter Back</label></div>
             <select value={firstID} onChange={handleOnChange}>
                 {
                     options.map(o=>(
@@ -30,6 +32,7 @@ const Filter = ({options, firstID, optionChange}:FilterProps)=>{
                     ))
                 }
             </select>
+            </div>
         </div>
     )
      

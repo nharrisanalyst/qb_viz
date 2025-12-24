@@ -7,7 +7,9 @@ function App() {
   return (
     <>
     <Header />
+     <div className='main-app-cont'>
       <ChartWithData />
+      </div>
     <Footer />
     </>
   )

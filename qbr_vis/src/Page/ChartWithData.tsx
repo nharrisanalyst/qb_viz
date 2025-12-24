@@ -10,6 +10,8 @@ import { makeFilterData } from './utilis/makeFilterData';
 import { makeTableData, makeDataTotals, makeAverages } from './utilis/makeTableData';
 import {tableColumnAccesor} from './utilis/tableColumnAccesor'
 
+import './chartWithData.scss'
+
 
 
 const ChartWithData =()=>{
@@ -66,13 +68,13 @@ const ChartWithData =()=>{
 
     return(
         <>
-        <div>
-        {!filterData?null:(<Filter options={filterData} optionChange={setSelectedQB} firstID={selectedQB} />)}
-        {!QBName?null:(<QBImage qbID={selectedQB} name={QBName}/>)}
-        </div>
-        <Chart data={data} qbID={selectedQB} />
         
-        {!tableData || !QBName? null:<TableAndTitle name={QBName} titleText='Stats for ' data={tableData.tableData} columns={tableData.columns}  />}
+        {!filterData?null:(<Filter options={filterData} optionChange={setSelectedQB} firstID={selectedQB} />)}
+        <div className='app-main-stuff'>
+            {!QBName?null:(<QBImage qbID={selectedQB} name={QBName}/>)}
+            <Chart data={data} qbID={selectedQB} />
+            {!tableData || !QBName? null:<TableAndTitle name={QBName} titleText='Stats for ' data={tableData.tableData} columns={tableData.columns}  />}
+        </div>
         </>
 
     )

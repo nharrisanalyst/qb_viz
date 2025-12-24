@@ -1,0 +1,18 @@
+.main-filter-cont{
+    margin-top: 12px;
+    margin-bottom:64px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width:calc(100% + 18px);
+    border-bottom:1px solid #c9cbcd;
+    padding-bottom:12px;
+    padding-right:18px;
+    margin-left:-18px;
+    .main-filter{
+        text-align: left;
+        .filter-label{
+            font-weight: bold;
+        }
+}
+}
