@@ -10,7 +10,6 @@ interface QBTableProps {
 }
 
 const QBTable=({data, columns}:QBTableProps)=> {
-    console.log(data, columns)
   const table = useReactTable({ data, columns, getCoreRowModel: getCoreRowModel() })
 
   return (

@@ -10,7 +10,6 @@ export const getQBName = (data:QB[], id:number):string|null =>{
         qbFound = true;
             }
             i++;
-            console.log('this is the rent', i);
         }
 
     return qbName;

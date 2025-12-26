@@ -4,6 +4,7 @@ import Chart from '../components/Chart/Chart'
 import Filter from '../components/Filter/Filter'
 import QBImage from '../components/QBImage/QBImage';
 import TableAndTitle from '../components/TableAndTitle/TableAndTitle'
+import TitleAndChildren from '../components/Organisms/TitleAndChildren/TitleAndChildren'
 import TableTitle from '../components/TableTitle/TableTitle';
 import { getQBName } from './utilis/getQBName';
 import { makeFilterData } from './utilis/makeFilterData';
@@ -71,10 +72,13 @@ const ChartWithData =()=>{
         
         {!filterData?null:(<Filter options={filterData} optionChange={setSelectedQB} firstID={selectedQB} />)}
         <div className='app-main-stuff'>
-            {!QBName?null:(<QBImage qbID={selectedQB} name={QBName}/>)}
-            <div >
-            <TableTitle text='Weekly QB Rating' name={""} />
-            <Chart data={data} qbID={selectedQB} />
+            {!QBName ||!tableData?.tableData || tableData.tableData.length<0? null:(<QBImage qbID={selectedQB} name={QBName} team={String(tableData.tableData[0].team)} statName={'Avg Rating'} stat={String(tableData.tableData[tableData.tableData.length-1].rat)} />)}
+            <div className='chart-weekly-section' >
+                <TitleAndChildren title={'Weekly QB Passing Rating'}>
+                    <Chart data={data} qbID={selectedQB} />
+                </TitleAndChildren>
+            
+            
             </div>
             {!tableData || !QBName? null:<TableAndTitle name={""} titleText='Weekly Stats' data={tableData.tableData} columns={tableData.columns}  />}
         </div>
