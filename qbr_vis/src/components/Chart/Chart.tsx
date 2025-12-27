@@ -3,6 +3,8 @@ import { useMemo,  useRef, useEffect } from 'react';
 import { scaleLinear, max, select, axisTop, axisRight, extent, line, curveCardinal } from 'd3';
 import { filterQB, LINE_DATA_ERROR } from './utillis/filterQB'
 
+import './chart.scss'
+
 interface ChartPros  {
     data:QB[];
     qbID:number;
@@ -115,18 +117,20 @@ const Chart = ({
     }, [gy, yScale]);
 
     return (
-        <svg width={width} height={height}>   
-            <g ref={gy} className='y-axis' transform={`translate(${marginLeft},0)`}/>
-            <g ref={gx} className='x-axis' transform={`translate(0,${height - marginBottom})`}/>
-            <text opacity={0.75} fontSize={12} x={width-marginLeft - marginRight+10} y={height-5} textAnchor={'middle'}>NFL Week</text>
-            <text opacity={0.75} fontSize={12} transform={'translate(20,' + 130 + ')rotate(-90)'} >QB Passing Rating</text>
-                <Circles />
-                <QBCircles />
-                <Line />
-            
+        <div className='weekly-chart-cont'>
+            <svg className='weekly-chart' width={width} height={height}>   
+                <g ref={gy} className='y-axis' transform={`translate(${marginLeft},0)`}/>
+                <g ref={gx} className='x-axis' transform={`translate(0,${height - marginBottom})`}/>
+                <text opacity={0.75} fontSize={12} x={width-marginLeft - marginRight+10} y={height-5} textAnchor={'middle'}>NFL Week</text>
+                <text opacity={0.75} fontSize={12} transform={'translate(20,' + 130 + ')rotate(-90)'} >QB Passing Rating</text>
+                    <Circles />
+                    <QBCircles />
+                    <Line />
+                
 
 
-        </svg>
+            </svg>
+        </div>
     )
 }
 

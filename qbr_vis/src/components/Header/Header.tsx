@@ -2,7 +2,8 @@ import './headers.scss';
 
 const Header = ()=>(
     <div className='main-header'>
-        <span>Monday Morning Quarter Back</span>
+        <span className='header-text-sz-lg'>Monday Morning Quarter Back</span>
+        <span className='header-text-sz-sm'>MM-QB</span>
     </div>
 )
 

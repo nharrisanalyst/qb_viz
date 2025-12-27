@@ -1,4 +1,5 @@
-import { Children, PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
+import './titleAndChildren.scss'
 
 type TitleAndChildrenProps = {
     title:string;
@@ -7,10 +8,13 @@ type TitleAndChildrenProps = {
 type TitleAndChildrenPropsWithChildren = PropsWithChildren<TitleAndChildrenProps>;
 
 const TitleAndChildren =({title, children}:TitleAndChildrenPropsWithChildren)=>(
-    <div>
-       <div>{title}</div>
+    
+    <div className='component-title-cont'>
+       <div className='component-title-title'>{title}</div>
+       
        {children}
     </div>
+    
 )
 
 

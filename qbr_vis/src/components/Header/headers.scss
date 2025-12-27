@@ -10,4 +10,25 @@
     padding-left:24px;
     color:#474749;
     background-color: #fff;
+
+    @include respond(md){
+            height:44px;
+            font-size: 24px;
+            line-height: 44px;
+            padding-left:12px;
+            width:calc(100% - 12px);
+        }
+
+    .header-text-sz-lg{
+        @include respond(md){
+            display:none;
+        }
+    }
+
+    .header-text-sz-sm{
+        display: none;
+        @include respond(md){
+            display:inline-block;
+        }
+    }
 }
