@@ -1,5 +1,6 @@
 import type {QB} from '../../types/QB';
-import { useMemo,  useRef, useEffect } from 'react';
+import debounce from "lodash.debounce"
+import { useMemo,  useRef, useEffect, useState, useCallback } from 'react';
 import { scaleLinear, max, select, axisTop, axisRight, extent, line, curveCardinal } from 'd3';
 import { filterQB, LINE_DATA_ERROR } from './utillis/filterQB'
 
@@ -32,26 +33,57 @@ const Chart = ({
     marginLeft = 40
 
 }:ChartPros)=>{
+    const svg = useRef<SVGSVGElement | null>(null)
+    const [demensions, setDemensions] = useState<{height:number; width:number}>({height:0,width:0})
     const gx = useRef<SVGGElement | null>(null)
     const gy = useRef<SVGGElement | null>(null)
-
+    
     const lineDataQB = useMemo(()=>{
         return filterQB(data, qbID)
     }, [data, qbID])
+
+    useEffect(()=>{
+        if(svg.current){
+            const svgRect = svg.current.getBoundingClientRect()
+            setDemensions({
+                height:svgRect.height,
+                width:svgRect.width,
+            })
+        }
+    },[svg])
+
+    useEffect(()=>{
+        
+        const resizeSVG = ()=>{
+            if(!svg.current) return
+            const svgRect = svg.current.getBoundingClientRect()
+            setDemensions({
+                height:svgRect.height,
+                width:svgRect.width,
+            })
+        }
+
+        const resizeSVGDeb = debounce(resizeSVG, 500);
+        window.addEventListener('resize', resizeSVGDeb);
+        return ()=>{
+            window.removeEventListener('reisze',resizeSVGDeb)
+        }
+
+    },[svg])
     
     const xScale = useMemo(()=>{
         const domain = extent(data, d => d.week)
         if (!domain[0]|| !domain[1]) return null
-        return scaleLinear<number,number>([0,domain[1]], [marginLeft, width - marginRight])
-    },[data])
+        return scaleLinear<number,number>([0,domain[1]], [marginLeft,demensions.width - marginRight])
+    },[data, demensions])
 
     const yScale = useMemo(()=>{
         const maxValue = max(data, d=>d.rat);
         if(!maxValue) return 
         const domain = [0, maxValue]
         if (domain[0] == null || domain[1] == null) return null
-        return scaleLinear<number,number>(domain, [height - marginBottom, marginTop]).nice()
-    },[data])
+        return scaleLinear<number,number>(domain, [demensions.height - marginBottom, marginTop]).nice()
+    },[data, demensions])
     
    const path  =  useMemo(()=>{
         if(!xScale || !yScale) return null;
@@ -92,7 +124,7 @@ const Chart = ({
     
     useEffect(() => { 
         if (!gx.current || !xScale) return
-            select(gx.current).call(axisTop(xScale).ticks(xScale.domain()[1]+1).tickSize(height - marginTop - marginBottom))
+            select(gx.current).call(axisTop(xScale).ticks(xScale.domain()[1]+1).tickSize(demensions.height - marginTop - marginBottom))
             .call(g=>g.select('.domain').remove())
             .call(g => g.selectAll(".tick:first-of-type line").remove())
             .call(g => g.selectAll(".tick:first-of-type text").remove())
@@ -100,12 +132,12 @@ const Chart = ({
                         .attr("stroke-opacity", 0.50)
                         .attr("stroke-dasharray", "2,2"))
             .call(g => g.selectAll(".tick text")
-                .attr("dy", height-marginBottom -marginTop + 15))
-    }, [gx, xScale]);
+                .attr("dy", demensions.height-marginBottom -marginTop + 15))
+    }, [gx, xScale, demensions]);
     
     useEffect(() => { 
         if (!gy.current || !yScale) return
-            select(gy.current).call(axisRight(yScale).tickSize(width - marginLeft - marginRight))
+            select(gy.current).call(axisRight(yScale).tickSize(demensions.width - marginLeft - marginRight))
             .call(g=>g.select('.domain').remove())
             .call(g => g.selectAll(".tick:not(:first-of-type) line").remove())
                         // .attr("stroke-opacity", 0.25)
@@ -114,14 +146,14 @@ const Chart = ({
                     .attr("x", 4)
                     .attr("dy", -4))
 
-    }, [gy, yScale]);
+    }, [gy, yScale, demensions]);
 
     return (
         <div className='weekly-chart-cont'>
-            <svg className='weekly-chart' width={width} height={height}>   
+            <svg ref={svg} className='weekly-chart' width={'100%'} height={'100%'}>   
                 <g ref={gy} className='y-axis' transform={`translate(${marginLeft},0)`}/>
-                <g ref={gx} className='x-axis' transform={`translate(0,${height - marginBottom})`}/>
-                <text opacity={0.75} fontSize={12} x={width-marginLeft - marginRight+10} y={height-5} textAnchor={'middle'}>NFL Week</text>
+                <g ref={gx} className='x-axis' transform={`translate(0,${demensions.height - marginBottom})`}/>
+                <text opacity={0.75} fontSize={12} x={demensions.width-marginLeft - marginRight+10} y={demensions.height-5} textAnchor={'middle'}>NFL Week</text>
                 <text opacity={0.75} fontSize={12} transform={'translate(20,' + 130 + ')rotate(-90)'} >QB Passing Rating</text>
                     <Circles />
                     <QBCircles />
