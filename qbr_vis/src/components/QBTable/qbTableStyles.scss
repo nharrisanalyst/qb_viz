@@ -1,56 +1,70 @@
-.main-table{
-    width:1000px;
+.main-table-cont{
+  max-width:100%;
+  width:1000px;
+  margin: auto;
+  overflow-x: auto;
+  .main-table-inn-cont{
+    width:100%;
+    
+     @include respond(md){
+        min-width: 555px;
+      }
+  .main-table{
+    width:100%;
 
     max-width:100%;
-    overflow-x: scroll;
+    
     border:1px solid #747678;
-    margin: auto;
-    // margin:0;
-    // border:none;
+    display: inline-table;
+      
+      // margin:0;
+      // border:none;
     border-collapse: collapse;
 
-    @include respond(md){
-      font-size:11px;
-    }
-    .main-t-head{
-        tr{
-            background-color: rgb(241, 240, 240);
-          th{
-            border-bottom:1px solid #747678;
-            border-top-width: 0;
-            border-right-width: 0;
-            padding: 3px 4px 3px 4px;
-            
-            border-right:1px solid #ddd;
+      @include respond(md){
+        font-size:11px;
+      }
+      .main-t-head{
+          tr{
+              background-color: rgb(241, 240, 240);
+            th{
+              border-bottom:1px solid #747678;
+              border-top-width: 0;
+              border-right-width: 0;
+              padding: 3px 4px 3px 4px;
+              
+              border-right:1px solid #ddd;
 
-            
-          }
-          th:last-child{
-            border-right:none;
-          }
-        }
-    }
-
-    td{
-        padding: 3px 4px 3px 4px;
-        border-right:1px solid #ddd;
-        border-bottom: 1px dashed #ddd;
-        @include respond(md){
-              padding: 1px 1.5px 1px 1.5px;
-
+              
             }
-    }
-    td:last-child{
-         border-right:none;
-    }
-    tr:nth-last-child(2){
-        color:black;
-        font-weight: bold;
-        background-color: rgb(241, 240, 240);
-    }
-    tr:last-child{
-        color:black;
-        font-weight: bold;
-        background-color: rgb(241, 240, 240);
-    }
+            th:last-child{
+              border-right:none;
+            }
+          }
+      }
+
+      td{
+          padding: 3px 4px 3px 4px;
+          border-right:1px solid #ddd;
+          border-bottom: 1px dashed #ddd;
+          @include respond(md){
+                padding: 1px 1.5px 1px 1.5px;
+
+              }
+      }
+      td:last-child{
+          border-right:none;
+      }
+      tr:nth-last-child(2){
+          color:black;
+          font-weight: bold;
+          background-color: rgb(241, 240, 240);
+      }
+      tr:last-child{
+          color:black;
+          font-weight: bold;
+          background-color: rgb(241, 240, 240);
+      }
+  }
+  } 
 }

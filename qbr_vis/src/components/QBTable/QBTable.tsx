@@ -13,6 +13,8 @@ const QBTable=({data, columns}:QBTableProps)=> {
   const table = useReactTable({ data, columns, getCoreRowModel: getCoreRowModel() })
 
   return (
+    <div className='main-table-cont'>
+      <div className='main-table-inn-cont'>
     <table className='main-table'>
       <thead className='main-t-head'>
         {table.getHeaderGroups().map((hg) => (
@@ -37,6 +39,8 @@ const QBTable=({data, columns}:QBTableProps)=> {
         ))}
       </tbody>
     </table>
+    </div>
+    </div>
   )
 }
 

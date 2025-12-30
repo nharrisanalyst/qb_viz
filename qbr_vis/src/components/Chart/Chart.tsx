@@ -9,8 +9,6 @@ import './chart.scss'
 interface ChartPros  {
     data:QB[];
     qbID:number;
-    width?:number;
-    height?:number;
     marginTop?:number;
     marginRight?:number;
     marginBottom?:number;
@@ -25,12 +23,10 @@ const QB_LINE_STROKE_COLOR = '#f21818';
 const Chart = ({
     data,
     qbID,
-    width = 1000,
-    height = 600,
     marginTop = 40,
-    marginRight = 40,
+    marginRight = 10,
     marginBottom = 40,
-    marginLeft = 40
+    marginLeft = 30
 
 }:ChartPros)=>{
     const svg = useRef<SVGSVGElement | null>(null)
