@@ -1,5 +1,5 @@
 .main-footer{
-     height:64px;
+    height:64px;
     border-top:1px solid #c9cbcd;
     width:100%;
     line-height: 64px;
@@ -8,4 +8,10 @@
     display:grid;
     grid-template-columns: 1fr 1fr;
     background-color: #fff;
+    align-items: center;
+    @include respond(sm){
+        height:48px;
+        font-size: 12px;
+        line-height: 48px;
+    }
 }

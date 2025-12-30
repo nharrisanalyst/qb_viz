@@ -1,6 +1,6 @@
 import type {QB} from '../../types/QB';
 import debounce from "lodash.debounce"
-import { useMemo,  useRef, useEffect, useState, useCallback } from 'react';
+import { useMemo,  useRef, useEffect, useState } from 'react';
 import { scaleLinear, max, select, axisTop, axisRight, extent, line, curveCardinal } from 'd3';
 import { filterQB, LINE_DATA_ERROR } from './utillis/filterQB'
 
