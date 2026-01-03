@@ -1,0 +1,8 @@
+.links-main-cont{
+    display:grid;
+    max-width: 100%;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    font-size: 18px;
+    text-decoration: underline;
+    grid-auto-rows: minmax(50px,1fr);
+}

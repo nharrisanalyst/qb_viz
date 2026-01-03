@@ -1,4 +1,5 @@
 import ChartWithData from './Page/ChartWithData'
+import QBLinks from './Page/QBLinks/QBLinks';
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import { Routes, Route } from "react-router"; 
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ChartWithData />} />
         <Route path="qbs" >
-          <Route index element={<ChartWithData />} />
+          <Route index element={<QBLinks />} />
           <Route path=":qbname" element={<ChartWithData />} />
         </Route>
       </Routes>
