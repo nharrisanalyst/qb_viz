@@ -1,5 +1,5 @@
-import {useMemo, useState, useEffect} from 'react';
-import { useParams, useLocation } from "react-router-dom";
+import {useMemo, useState, useEffect, useCallback} from 'react';
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import {useGetQBData} from '../hooks/useGetQBData'
 import Chart from '../components/Chart/Chart'
 import Filter from '../components/Filter/Filter'
@@ -19,11 +19,10 @@ import { QBIDERROR } from './utilis/getPlayerID';
 const ChartWithData =()=>{
     let { qbname } = useParams();
     let location = useLocation();
+    let navigate = useNavigate();
     const [idErr, setIdErr] = useState<"NO_ERROR" |"NOT_FOUND">("NO_ERROR")
     const [selectedQB, setSelectedQB] = useState<number|null>(null);
     const [data,loading,error] = useGetQBData();
-
-    console.log('this is the qb name', qbname, location.pathname)
 
     const filterData = useMemo(()=>{
         if(!data) return null;
@@ -72,7 +71,13 @@ const ChartWithData =()=>{
             return tableData;
     },[data,selectedQB])
 
+    const handleOnChange=useCallback((qbID:number):void=>{
+        if(!data) return;
+        const qbName = getQBName(data, qbID)
+        const qbnameURL = qbName?.replace(" ", "_");
+        navigate(`/qbs/${qbnameURL}`);
 
+    },[data])
 
 
     if(idErr === QBIDERROR){
@@ -106,7 +111,7 @@ const ChartWithData =()=>{
     return(
         <>
         
-        {!filterData?null:(<Filter options={filterData} optionChange={setSelectedQB} firstID={selectedQB} />)}
+        {!filterData?null:(<Filter options={filterData} optionChange={handleOnChange} firstID={selectedQB} />)}
         <div className='app-main-stuff'>
             {!QBName ||!tableData?.tableData || tableData.tableData.length<0? null:(<QBImage qbID={selectedQB} name={QBName} team={String(tableData.tableData[0].team)} statName={'Avg Rating'} stat={String(tableData.tableData[tableData.tableData.length-1].rat)} />)}
                 <TitleAndChildren title={'Weekly QB Passing Rating'}>
