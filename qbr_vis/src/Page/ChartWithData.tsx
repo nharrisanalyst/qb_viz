@@ -1,4 +1,5 @@
-import {useMemo, useState} from 'react';
+import {useMemo, useState, useEffect} from 'react';
+import { useParams, useLocation } from "react-router-dom";
 import {useGetQBData} from '../hooks/useGetQBData'
 import Chart from '../components/Chart/Chart'
 import Filter from '../components/Filter/Filter'
@@ -6,30 +7,58 @@ import QBImage from '../components/QBImage/QBImage';
 import TitleAndChildren from '../components/Organisms/TitleAndChildren/TitleAndChildren'
 import QBTable from '../components/QBTable/QBTable';
 import { getQBName } from './utilis/getQBName';
+import {getPlayerID} from './utilis/getPlayerID'
 import { makeFilterData } from './utilis/makeFilterData';
 import { makeTableData, makeDataTotals, makeAverages } from './utilis/makeTableData';
 import {tableColumnAccesor} from './utilis/tableColumnAccesor'
 
 import './chartWithData.scss'
 
-
+import { QBIDERROR } from './utilis/getPlayerID';
 
 const ChartWithData =()=>{
-    const [selectedQB, setSelectedQB] = useState<number>(3912547);
+    let { qbname } = useParams();
+    let location = useLocation();
+    const [idErr, setIdErr] = useState<"NO_ERROR" |"NOT_FOUND">("NO_ERROR")
+    const [selectedQB, setSelectedQB] = useState<number|null>(null);
     const [data,loading,error] = useGetQBData();
+
+    console.log('this is the qb name', qbname, location.pathname)
 
     const filterData = useMemo(()=>{
         if(!data) return null;
             return makeFilterData(data);
     },[data])
 
+    useEffect(()=>{
+        if(!data) return;
+        let id = null;
+        if (location.pathname === '/'){
+            id = 3918298;
+            setSelectedQB(id);
+            return;
+        }
+
+        if(!qbname) return;
+
+        id = getPlayerID(data, qbname);
+
+        if(id=== QBIDERROR){
+            setIdErr(QBIDERROR);
+            return;
+        }
+
+        setSelectedQB(id);
+
+    }, [qbname, data])
+
      const QBName= useMemo(()=>{
-        if(!data) return null;
+        if(!data || !selectedQB ) return null;
             return getQBName(data, selectedQB)
     },[data,selectedQB])
 
     const tableData = useMemo(()=>{
-        if(!data) return null;
+        if(!data || !selectedQB) return null;
             const tableData = makeTableData(data,tableColumnAccesor, selectedQB);
             const totalData = makeDataTotals(tableData.tableData);
             const  avgData =  makeAverages(totalData, tableData.tableData);
@@ -46,7 +75,13 @@ const ChartWithData =()=>{
 
 
 
-
+    if(idErr === QBIDERROR){
+        return(
+        <div>
+            <h1> 404 ERROR Page Not FOUND</h1>
+        </div>
+        );
+    }
 
    
 
@@ -58,13 +93,15 @@ const ChartWithData =()=>{
         )
     }
 
-    if(loading == 'LOADING' || !data){
+    if(loading == 'LOADING' || !data || !selectedQB){
         return (
             <div>
                 Loading Data...
             </div>
         )
     }
+
+    
 
     return(
         <>
