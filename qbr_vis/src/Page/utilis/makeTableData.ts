@@ -42,7 +42,7 @@ export const makeDataTotals = (data:(QB| Record<string, number|string>)[])=>{
         for(const [key,value] of Object.entries(cur)){
             if(typeof value === 'number' && typeof acc[key]==='number' && key != 'week' ){
                 acc[key] = (acc[key] ?? 0) + value
-                //
+                // for float addition
                 if(!Number.isInteger(acc[key])){
                     acc[key] = Number(acc[key].toFixed(1))
                 }
