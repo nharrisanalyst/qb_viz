@@ -6,6 +6,7 @@ import Filter from '../components/Filter/Filter'
 import QBImage from '../components/QBImage/QBImage';
 import TitleAndChildren from '../components/Organisms/TitleAndChildren/TitleAndChildren'
 import QBTable from '../components/QBTable/QBTable';
+import QBMeta from '../components/QBMeta/QBMeta';
 import { getQBName } from './utilis/getQBName';
 import {getPlayerID} from './utilis/getPlayerID'
 import { makeFilterData } from './utilis/makeFilterData';
@@ -80,6 +81,13 @@ const ChartWithData =()=>{
     },[data])
 
 
+    const selctedQBQB =  useMemo(()=>{
+        if(!data || !selectedQB) return null;
+        return data.filter(d=> d.id === selectedQB)
+    }, [data, selectedQB])
+    
+
+
     if(idErr === QBIDERROR){
         return(
         <div>
@@ -105,12 +113,12 @@ const ChartWithData =()=>{
             </div>
         )
     }
-
+   
     
 
     return(
         <>
-        
+        {!selctedQBQB?null:(<QBMeta qb={selctedQBQB[0]} />)}
         {!filterData?null:(<Filter options={filterData} optionChange={handleOnChange} firstID={selectedQB} />)}
         <div className='app-main-stuff'>
             {!QBName ||!tableData?.tableData || tableData.tableData.length<0? null:(<QBImage qbID={selectedQB} name={QBName} team={String(tableData.tableData[0].team)} statName={'Avg Rating'} stat={String(tableData.tableData[tableData.tableData.length-1].rat)} />)}
