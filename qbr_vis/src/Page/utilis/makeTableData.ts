@@ -37,11 +37,14 @@ export const makeDataTotals = (data:(QB| Record<string, number|string>)[])=>{
         }
 
     }
-
+//Number((6.688689).toFixed(1));
     const totalData = data.reduce<Record<string, number|string>>((acc,cur)=>{
         for(const [key,value] of Object.entries(cur)){
             if(typeof value === 'number' && typeof acc[key]==='number' && key != 'week' ){
                 acc[key] = (acc[key] ?? 0) + value
+                if(!Number.isInteger(acc[key])){
+                    acc[key] = Number(acc[key].toFixed(1))
+                }
             }
         }
         return acc;
