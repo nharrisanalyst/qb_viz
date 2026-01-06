@@ -75,7 +75,7 @@ const ChartWithData =()=>{
     const handleOnChange=useCallback((qbID:number):void=>{
         if(!data) return;
         const qbName = getQBName(data, qbID)
-        const qbnameURL = qbName?.replace(" ", "_");
+        const qbnameURL = qbName?.replaceAll(" ", "_");
         navigate(`/qbs/${qbnameURL}`);
 
     },[data])

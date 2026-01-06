@@ -32,7 +32,7 @@ const [data,loading,error] = useGetQBData();
         <div className='links-main-cont'>
         {
             makeFilterData(data).map(option=>{
-            const nameURL = option.text.replace(' ', '_')
+            const nameURL = option.text.replaceAll(' ', '_')
                 return(
                     <>
                         <Link id={String(option.id)}  to={`/qbs/${nameURL}`} >{option.text} </Link>

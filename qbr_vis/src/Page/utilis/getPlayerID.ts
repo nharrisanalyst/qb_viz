@@ -6,7 +6,7 @@ export const getPlayerID = (data:QB[], name:string):number| 'NOT_FOUND' =>{
     const playerIDs = new Map();
 
     data.forEach(qb=>{
-        const qbName = qb.name.replace(" ", "_");
+        const qbName = qb.name.replaceAll(" ", "_");
         if(!playerIDs.has(qbName)){
             playerIDs.set(qbName.toLowerCase(), qb.id);
         }
