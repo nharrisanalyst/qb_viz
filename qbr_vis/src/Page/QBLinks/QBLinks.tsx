@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import {useGetQBData} from '../../hooks/useGetQBData'
 import { makeFilterData } from '../utilis/makeFilterData'
+import { slugifyURL } from "../utilis/slugifyURL";
 
 import './links.scss';
 
@@ -32,7 +33,7 @@ const [data,loading,error] = useGetQBData();
         <div className='links-main-cont'>
         {
             makeFilterData(data).map(option=>{
-            const nameURL = option.text.replaceAll(' ', '_')
+            const nameURL = slugifyURL(option.text)
                 return(
                     <>
                         <Link id={String(option.id)}  to={`/qbs/${nameURL}`} >{option.text} </Link>
