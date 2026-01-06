@@ -4,7 +4,7 @@
                     <url>
                         <loc>https://www.mm-qb.com/</loc>
                         <changefreq>daily</changefreq>
-                        <priority>1</priority>
+                        <priority>0.8</priority>
                     </url>
 
                     <url>
@@ -14,470 +14,470 @@
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Josh_Allen</loc>
+                        <loc>https://www.mm-qb.com/qbs/josh-allen</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Joe_Flacco</loc>
+                        <loc>https://www.mm-qb.com/qbs/joe-flacco</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Jared_Goff</loc>
+                        <loc>https://www.mm-qb.com/qbs/jared-goff</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Drake_Maye</loc>
+                        <loc>https://www.mm-qb.com/qbs/drake-maye</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Michael_Penix_Jr.</loc>
+                        <loc>https://www.mm-qb.com/qbs/michael-penix-jr</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Spencer_Rattler</loc>
+                        <loc>https://www.mm-qb.com/qbs/spencer-rattler</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Brock_Purdy</loc>
+                        <loc>https://www.mm-qb.com/qbs/brock-purdy</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Justin_Herbert</loc>
+                        <loc>https://www.mm-qb.com/qbs/justin-herbert</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Bo_Nix</loc>
+                        <loc>https://www.mm-qb.com/qbs/bo-nix</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Geno_Smith</loc>
+                        <loc>https://www.mm-qb.com/qbs/geno-smith</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Patrick_Mahomes</loc>
+                        <loc>https://www.mm-qb.com/qbs/patrick-mahomes</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Daniel_Jones</loc>
+                        <loc>https://www.mm-qb.com/qbs/daniel-jones</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Aaron_Rodgers</loc>
+                        <loc>https://www.mm-qb.com/qbs/aaron-rodgers</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Matthew_Stafford</loc>
+                        <loc>https://www.mm-qb.com/qbs/matthew-stafford</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Caleb_Williams</loc>
+                        <loc>https://www.mm-qb.com/qbs/caleb-williams</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Dak_Prescott</loc>
+                        <loc>https://www.mm-qb.com/qbs/dak-prescott</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Kyler_Murray</loc>
+                        <loc>https://www.mm-qb.com/qbs/kyler-murray</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Jayden_Daniels</loc>
+                        <loc>https://www.mm-qb.com/qbs/jayden-daniels</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/C.J._Stroud</loc>
+                        <loc>https://www.mm-qb.com/qbs/cj-stroud</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Trevor_Lawrence</loc>
+                        <loc>https://www.mm-qb.com/qbs/trevor-lawrence</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Jalen_Hurts</loc>
+                        <loc>https://www.mm-qb.com/qbs/jalen-hurts</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Bryce_Young</loc>
+                        <loc>https://www.mm-qb.com/qbs/bryce-young</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Russell_Wilson</loc>
+                        <loc>https://www.mm-qb.com/qbs/russell-wilson</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Baker_Mayfield</loc>
+                        <loc>https://www.mm-qb.com/qbs/baker-mayfield</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Justin_Fields</loc>
+                        <loc>https://www.mm-qb.com/qbs/justin-fields</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Jordan_Love</loc>
+                        <loc>https://www.mm-qb.com/qbs/jordan-love</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Sam_Darnold</loc>
+                        <loc>https://www.mm-qb.com/qbs/sam-darnold</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Lamar_Jackson</loc>
+                        <loc>https://www.mm-qb.com/qbs/lamar-jackson</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Tua_Tagovailoa</loc>
+                        <loc>https://www.mm-qb.com/qbs/tua-tagovailoa</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Joe_Burrow</loc>
+                        <loc>https://www.mm-qb.com/qbs/joe-burrow</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Cam_Ward</loc>
+                        <loc>https://www.mm-qb.com/qbs/cam-ward</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/J.J._McCarthy</loc>
+                        <loc>https://www.mm-qb.com/qbs/jj-mccarthy</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Mac_Jones</loc>
+                        <loc>https://www.mm-qb.com/qbs/mac-jones</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Jake_Browning</loc>
+                        <loc>https://www.mm-qb.com/qbs/jake-browning</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Tyrod_Taylor</loc>
+                        <loc>https://www.mm-qb.com/qbs/tyrod-taylor</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Dillon_Gabriel</loc>
+                        <loc>https://www.mm-qb.com/qbs/dillon-gabriel</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Marcus_Mariota</loc>
+                        <loc>https://www.mm-qb.com/qbs/marcus-mariota</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Carson_Wentz</loc>
+                        <loc>https://www.mm-qb.com/qbs/carson-wentz</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Joe_Milton_III</loc>
+                        <loc>https://www.mm-qb.com/qbs/joe-milton-iii</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Jaxson_Dart</loc>
+                        <loc>https://www.mm-qb.com/qbs/jaxson-dart</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Andy_Dalton</loc>
+                        <loc>https://www.mm-qb.com/qbs/andy-dalton</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Chris_Olave</loc>
+                        <loc>https://www.mm-qb.com/qbs/chris-olave</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Cooper_Rush</loc>
+                        <loc>https://www.mm-qb.com/qbs/cooper-rush</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Trey_Lance</loc>
+                        <loc>https://www.mm-qb.com/qbs/trey-lance</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Davis_Mills</loc>
+                        <loc>https://www.mm-qb.com/qbs/davis-mills</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Cam_Akers</loc>
+                        <loc>https://www.mm-qb.com/qbs/cam-akers</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/David_Montgomery</loc>
+                        <loc>https://www.mm-qb.com/qbs/david-montgomery</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Jacoby_Brissett</loc>
+                        <loc>https://www.mm-qb.com/qbs/jacoby-brissett</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Tyler_Huntley</loc>
+                        <loc>https://www.mm-qb.com/qbs/tyler-huntley</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Cooper_Kupp</loc>
+                        <loc>https://www.mm-qb.com/qbs/cooper-kupp</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Quinn_Ewers</loc>
+                        <loc>https://www.mm-qb.com/qbs/quinn-ewers</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Kirk_Cousins</loc>
+                        <loc>https://www.mm-qb.com/qbs/kirk-cousins</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Tyler_Shough</loc>
+                        <loc>https://www.mm-qb.com/qbs/tyler-shough</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Max_Brosmer</loc>
+                        <loc>https://www.mm-qb.com/qbs/max-brosmer</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Mitchell_Trubisky</loc>
+                        <loc>https://www.mm-qb.com/qbs/mitchell-trubisky</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Breece_Hall</loc>
+                        <loc>https://www.mm-qb.com/qbs/breece-hall</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Tyson_Bagent</loc>
+                        <loc>https://www.mm-qb.com/qbs/tyson-bagent</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/DJ_Moore</loc>
+                        <loc>https://www.mm-qb.com/qbs/dj-moore</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Taysom_Hill</loc>
+                        <loc>https://www.mm-qb.com/qbs/taysom-hill</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Kyle_Allen</loc>
+                        <loc>https://www.mm-qb.com/qbs/kyle-allen</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Jameis_Winston</loc>
+                        <loc>https://www.mm-qb.com/qbs/jameis-winston</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Mason_Rudolph</loc>
+                        <loc>https://www.mm-qb.com/qbs/mason-rudolph</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Shedeur_Sanders</loc>
+                        <loc>https://www.mm-qb.com/qbs/shedeur-sanders</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Malik_Willis</loc>
+                        <loc>https://www.mm-qb.com/qbs/malik-willis</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Teddy_Bridgewater</loc>
+                        <loc>https://www.mm-qb.com/qbs/teddy-bridgewater</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Gunner_Olszewski</loc>
+                        <loc>https://www.mm-qb.com/qbs/gunner-olszewski</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Riley_Leonard</loc>
+                        <loc>https://www.mm-qb.com/qbs/riley-leonard</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Brady_Cook</loc>
+                        <loc>https://www.mm-qb.com/qbs/brady-cook</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Kenny_Pickett</loc>
+                        <loc>https://www.mm-qb.com/qbs/kenny-pickett</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Philip_Rivers</loc>
+                        <loc>https://www.mm-qb.com/qbs/philip-rivers</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Gardner_Minshew</loc>
+                        <loc>https://www.mm-qb.com/qbs/gardner-minshew</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Chris_Oladokun</loc>
+                        <loc>https://www.mm-qb.com/qbs/chris-oladokun</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Josh_Johnson</loc>
+                        <loc>https://www.mm-qb.com/qbs/josh-johnson</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Clayton_Tune</loc>
+                        <loc>https://www.mm-qb.com/qbs/clayton-tune</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Tanner_McKee</loc>
+                        <loc>https://www.mm-qb.com/qbs/tanner-mckee</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Brandon_Allen</loc>
+                        <loc>https://www.mm-qb.com/qbs/brandon-allen</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Aidan_O'Connell</loc>
+                        <loc>https://www.mm-qb.com/qbs/aidan-oconnell</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
 
                     <url>
-                        <loc>https://www.mm-qb.com/qbs/Shane_Buechele</loc>
+                        <loc>https://www.mm-qb.com/qbs/shane-buechele</loc>
                         <changefreq>weekly</changefreq>
-                        <priority>1.2</priority>
+                        <priority>1</priority>
                     </url>
             </urlset>

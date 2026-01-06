@@ -1,4 +1,5 @@
 import {csvParse} from 'd3';
+import {slugifyURL} from '../src/Page/utilis/slugifyURL.ts';
 import path from "node:path";
 import fs from "node:fs/promises";
 
@@ -29,12 +30,12 @@ async function generateSitemap() {
     const uniqueNames = [...new Set(names)]
 
     const urls = [
-        {path:"/", changefreq: "daily", priority: 1.0},
+        {path:"/", changefreq: "daily", priority: 0.8},
         {path:"/qbs", changefreq: "weekly", priority: 0.8},
         ...uniqueNames.map((z) => ({
-                path: `/qbs/${z}`,
+                path:`/qbs/${slugifyURL(z)}`,
                 changefreq: "weekly",
-                priority: 1.2,
+                priority: 1.0,
             })),
     ]
 
