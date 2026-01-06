@@ -20,6 +20,8 @@ type XYDatum ={
 }
 
 const QB_LINE_STROKE_COLOR = '#f21818';
+const QB_CIRCLE_STROKE_COLOR = '#f21818';
+
 const Chart = ({
     data,
     qbID,
@@ -86,7 +88,7 @@ const Chart = ({
         const lineShape = line<XYDatum>()
                     .x(d =>xScale(d.week))
                     .y(d=>yScale(d.rat))
-                    .curve(curveCardinal.tension(0.55))
+                    .curve(curveCardinal.tension(0.60))
         if(lineDataQB === LINE_DATA_ERROR) return null;
         return lineShape(lineDataQB);
    },[yScale,xScale, lineDataQB])
@@ -104,7 +106,7 @@ const Chart = ({
         if(!path || lineDataQB === LINE_DATA_ERROR||!xScale || !yScale ) return null;
         return(
             <g>
-        {lineDataQB.map(qb=>(<circle cx={xScale(qb.week)} cy={yScale(qb.rat)} r='4' fill='none' stroke={QB_LINE_STROKE_COLOR} strokeWidth='2'/>))}
+        {lineDataQB.map(qb=>(<circle cx={xScale(qb.week)} cy={yScale(qb.rat)} r='4' fill='none' stroke={QB_CIRCLE_STROKE_COLOR} strokeWidth='2.25'/>))}
         </g>
         )
     }
@@ -152,10 +154,9 @@ const Chart = ({
                 <text opacity={0.75} fontSize={12} x={demensions.width-marginLeft - marginRight+10} y={demensions.height-5} textAnchor={'middle'}>NFL Week</text>
                 <text opacity={0.75} fontSize={12} transform={'translate(20,' + 130 + ')rotate(-90)'} >QB Passing Rating</text>
                     <Circles />
-                    <QBCircles />
                     <Line />
-                
-
+                    <QBCircles />
+                    
 
             </svg>
         </div>
