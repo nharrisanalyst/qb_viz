@@ -12,6 +12,7 @@ import {getPlayerID} from './utilis/getPlayerID'
 import { makeFilterData } from './utilis/makeFilterData';
 import { makeTableData, makeDataTotals, makeAverages } from './utilis/makeTableData';
 import {tableColumnAccesor} from './utilis/tableColumnAccesor'
+import { slugifyURL } from './utilis/slugifyURL';
 
 import './chartWithData.scss'
 
@@ -40,7 +41,7 @@ const ChartWithData =()=>{
         }
 
         if(!qbname) return;
-
+        
         id = getPlayerID(data, qbname);
 
         if(id=== QBIDERROR){
@@ -72,21 +73,19 @@ const ChartWithData =()=>{
             return tableData;
     },[data,selectedQB])
 
-    const handleOnChange=useCallback((qbID:number):void=>{
-        if(!data) return;
-        const qbName = getQBName(data, qbID)
-        const qbnameURL = qbName?.replaceAll(" ", "_");
-        navigate(`/qbs/${qbnameURL}`);
-
-    },[data])
-
-
     const selctedQBQB =  useMemo(()=>{
         if(!data || !selectedQB) return null;
         return data.filter(d=> d.id === selectedQB)
     }, [data, selectedQB])
     
+    const handleOnChange=useCallback((qbID:number):void=>{
+        if(!data) return;
+        const qbName = getQBName(data, qbID)
+        if(!qbName) return;
+        const qbnameURL = slugifyURL(qbName)
+        navigate(`/qbs/${qbnameURL}`);
 
+    },[data])
 
     if(idErr === QBIDERROR){
         return(
