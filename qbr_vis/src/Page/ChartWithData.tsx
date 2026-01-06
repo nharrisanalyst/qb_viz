@@ -34,7 +34,7 @@ const ChartWithData =()=>{
         let id = null;
         if (location.pathname === '/'){
             id = 3918298;
-            setSelectedQB(id);
+            navigate(`/qbs/Josh_Allen`);
             return;
         }
 
