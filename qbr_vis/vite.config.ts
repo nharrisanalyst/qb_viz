@@ -9,6 +9,13 @@ const currentDir = dirname(fileURLToPath(import.meta.url));
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    manifest: true,
+    outDir: "dist",
+    rollupOptions: {
+      input: "/index.html",
+    },
+  },
   css:{
     preprocessorOptions:{
       scss:{
